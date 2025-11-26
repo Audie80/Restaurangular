@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {Component} from '@angular/core';
+import {MainNavComponent} from './main-nav/main-nav.component';
 
 @Component({
-  selector: 'app-root',
+  selector: 'audie-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [MainNavComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'restaurangular';
