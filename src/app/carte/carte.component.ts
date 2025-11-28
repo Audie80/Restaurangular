@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { MainDashComponent } from '../main-dash/main-dash.component';
 
 @Component({
   selector: 'audie-carte',
   standalone: true,
-  imports: [],
+  imports: [MainDashComponent],
   templateUrl: './carte.component.html',
   styleUrl: './carte.component.css'
 })
