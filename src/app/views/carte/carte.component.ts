@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MainDashComponent } from '../main-dash/main-dash.component';
+import { MainDashComponent } from '../../components/main-dash/main-dash.component';
 
 @Component({
   selector: 'audie-carte',
