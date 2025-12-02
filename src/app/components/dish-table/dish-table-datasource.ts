@@ -4,15 +4,13 @@ import { MatSort } from '@angular/material/sort';
 import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
 
-// TODO: Replace this with your own data model type
 export interface DishTableItem {
   name: string;
   id: number;
   price: number;
 }
 
-// TODO: replace this with real data from your application
-const EXAMPLE_DATA: DishTableItem[] = [
+const DISH_DATA: DishTableItem[] = [
   {id: 1, name: 'boeuf carottes', price: 8.80},
   {id: 2, name: 'brandade de morue', price: 9.90},
   {id: 3, name: 'faux-filet sauce marchand de vin', price: 12.50},
@@ -31,7 +29,7 @@ const EXAMPLE_DATA: DishTableItem[] = [
  * (including sorting, pagination, and filtering).
  */
 export class DishTableDataSource extends DataSource<DishTableItem> {
-  data: DishTableItem[] = EXAMPLE_DATA;
+  data: DishTableItem[] = DISH_DATA;
   paginator: MatPaginator | undefined;
   sort: MatSort | undefined;
 

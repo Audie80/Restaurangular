@@ -3,13 +3,14 @@ import { MatTableModule, MatTable } from '@angular/material/table';
 import { MatPaginatorModule, MatPaginator } from '@angular/material/paginator';
 import { MatSortModule, MatSort } from '@angular/material/sort';
 import { DishTableDataSource, DishTableItem } from './dish-table-datasource';
+import { CurrencyPipe } from '@angular/common';
 
 @Component({
   selector: 'audie-dish-table',
   templateUrl: './dish-table.component.html',
   styleUrl: './dish-table.component.css',
   standalone: true,
-  imports: [MatTableModule, MatPaginatorModule, MatSortModule]
+  imports: [MatTableModule, MatPaginatorModule, MatSortModule, CurrencyPipe]
 })
 export class DishTableComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
