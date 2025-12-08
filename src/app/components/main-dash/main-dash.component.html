@@ -17,22 +17,36 @@
             </mat-card-title>
           </mat-card-header>
           <mat-card-content class="dashboard-card-content">
-            <audie-dish-table *ngIf="card.id === 'crt'"></audie-dish-table>
-            <div *ngIf="card.id === 'brg'">
-              <p *ngFor="let brg of burgers">{{ brg.title }} ({{ brg.description }}) : {{ brg.price | currency:'EUR':'symbol':'1.2-2' }}
-                <mat-divider></mat-divider>
-              </p>
-            </div>
-            <div *ngIf="card.id === 'pzz'">
-              <p *ngFor="let pzz of pizzas">{{ pzz.title }} ({{ pzz.description }}) : {{ pzz.price | currency:'EUR':'symbol':'1.2-2' }}
-                <mat-divider></mat-divider>
-              </p>
-            </div>
-            <div *ngIf="card.id === 'glt'">
-              <p *ngFor="let glt of galettes">{{ glt.title }} ({{ glt.description }}) : {{ glt.price | currency:'EUR':'symbol':'1.2-2' }}
-                <mat-divider></mat-divider>
-              </p>
-            </div>
+            @if (card.id === 'crt') {
+              <audie-dish-table></audie-dish-table>
+            }
+            @if (card.id === 'brg') {
+              <div>
+                @for (brg of burgers; track brg) {
+                  <p>{{ brg.title }} ({{ brg.description }}) : {{ brg.price | currency:'EUR':'symbol':'1.2-2' }}
+                    <mat-divider></mat-divider>
+                  </p>
+                }
+              </div>
+            }
+            @if (card.id === 'pzz') {
+              <div>
+                @for (pzz of pizzas; track pzz) {
+                  <p>{{ pzz.title }} ({{ pzz.description }}) : {{ pzz.price | currency:'EUR':'symbol':'1.2-2' }}
+                    <mat-divider></mat-divider>
+                  </p>
+                }
+              </div>
+            }
+            @if (card.id === 'glt') {
+              <div>
+                @for (glt of galettes; track glt) {
+                  <p>{{ glt.title }} ({{ glt.description }}) : {{ glt.price | currency:'EUR':'symbol':'1.2-2' }}
+                    <mat-divider></mat-divider>
+                  </p>
+                }
+              </div>
+            }
           </mat-card-content>
         </mat-card>
       </mat-grid-tile>

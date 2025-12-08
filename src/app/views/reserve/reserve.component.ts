@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { JsonPipe, NgFor } from "@angular/common";
+import { JsonPipe } from "@angular/common";
 
 @Component({
     selector: 'audie-reserve',
-    imports: [ReactiveFormsModule, NgFor, JsonPipe],
+    imports: [ReactiveFormsModule, JsonPipe],
     templateUrl: './reserve.component.html',
     styleUrl: './reserve.component.css'
 })

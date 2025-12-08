@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 import { map } from 'rxjs/operators';
-import { AsyncPipe, NgIf, NgFor, CurrencyPipe } from '@angular/common';
+import { AsyncPipe, CurrencyPipe } from '@angular/common';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
@@ -17,18 +17,16 @@ import { MatDividerModule } from '@angular/material/divider';
     templateUrl: './main-dash.component.html',
     styleUrl: './main-dash.component.css',
     imports: [
-        NgIf,
-        NgFor,
-        DishTableComponent,
-        AsyncPipe,
-        CurrencyPipe,
-        MatGridListModule,
-        MatMenuModule,
-        MatIconModule,
-        MatButtonModule,
-        MatCardModule,
-        MatDividerModule
-    ]
+    DishTableComponent,
+    AsyncPipe,
+    CurrencyPipe,
+    MatGridListModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule,
+    MatCardModule,
+    MatDividerModule
+]
 })
 export class MainDashComponent implements OnInit {
   private breakpointObserver = inject(BreakpointObserver);
