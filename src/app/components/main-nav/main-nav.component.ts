@@ -11,19 +11,18 @@ import {Observable} from 'rxjs';
 import {map, shareReplay} from 'rxjs/operators';
 
 @Component({
-  selector: 'audie-main-nav',
-  templateUrl: './main-nav.component.html',
-  styleUrl: './main-nav.component.css',
-  standalone: true,
-  imports: [
-    RouterOutlet,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatListModule,
-    MatIconModule,
-    AsyncPipe,
-  ],
+    selector: 'audie-main-nav',
+    templateUrl: './main-nav.component.html',
+    styleUrl: './main-nav.component.css',
+    imports: [
+        RouterOutlet,
+        MatToolbarModule,
+        MatButtonModule,
+        MatSidenavModule,
+        MatListModule,
+        MatIconModule,
+        AsyncPipe,
+    ]
 })
 export class MainNavComponent {
   private breakpointObserver = inject(BreakpointObserver);

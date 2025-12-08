@@ -13,23 +13,22 @@ import { Food } from '../../models/food.interface';
 import { MatDividerModule } from '@angular/material/divider';
 
 @Component({
-  selector: 'audie-main-dash',
-  templateUrl: './main-dash.component.html',
-  styleUrl: './main-dash.component.css',
-  standalone: true,
-  imports: [
-    NgIf,
-    NgFor,
-    DishTableComponent,
-    AsyncPipe,
-    CurrencyPipe,
-    MatGridListModule,
-    MatMenuModule,
-    MatIconModule,
-    MatButtonModule,
-    MatCardModule,
-    MatDividerModule
-  ]
+    selector: 'audie-main-dash',
+    templateUrl: './main-dash.component.html',
+    styleUrl: './main-dash.component.css',
+    imports: [
+        NgIf,
+        NgFor,
+        DishTableComponent,
+        AsyncPipe,
+        CurrencyPipe,
+        MatGridListModule,
+        MatMenuModule,
+        MatIconModule,
+        MatButtonModule,
+        MatCardModule,
+        MatDividerModule
+    ]
 })
 export class MainDashComponent implements OnInit {
   private breakpointObserver = inject(BreakpointObserver);

@@ -3,11 +3,10 @@ import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { JsonPipe, NgFor } from "@angular/common";
 
 @Component({
-  selector: 'audie-reserve',
-  standalone: true,
-  imports: [ReactiveFormsModule, NgFor, JsonPipe],
-  templateUrl: './reserve.component.html',
-  styleUrl: './reserve.component.css',
+    selector: 'audie-reserve',
+    imports: [ReactiveFormsModule, NgFor, JsonPipe],
+    templateUrl: './reserve.component.html',
+    styleUrl: './reserve.component.css'
 })
 export class ReserveComponent implements OnInit {
   reservationForm!: FormGroup;

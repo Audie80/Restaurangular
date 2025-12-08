@@ -6,11 +6,10 @@ import { HomeComponent } from './views/home/home.component';
 import { ReserveComponent } from './views/reserve/reserve.component';
 
 @Component({
-  selector: 'audie-root',
-  standalone: true,
-  imports: [MainNavComponent, CarteComponent, ContactComponent, HomeComponent, ReserveComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+    selector: 'audie-root',
+    imports: [MainNavComponent, CarteComponent, ContactComponent, HomeComponent, ReserveComponent],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'restaurangular';
